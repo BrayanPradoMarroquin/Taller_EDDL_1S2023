@@ -6,7 +6,7 @@ package listas_simples;
 
 /**
  *
- * @author Usuario
+ * @author Brayan_Prado
  */
 public class ListaSimple {
     public Nodo cabeza;
@@ -15,6 +15,7 @@ public class ListaSimple {
         this.cabeza = null;
     }
     
+    //METODO PARA AGREGAR DATOS AL FINAL DE LA LISTA
     public void agregar(int indicador){
         //crear Nodo
         Nodo nuevo = new Nodo(indicador);
@@ -37,7 +38,7 @@ public class ListaSimple {
         }
     }
     
-    //eliminar, buscar
+    //METODO PARA ELIMINAR EL DATO SOLICITADO
     public void eliminar(int indicador){
         Nodo auxiliar = this.cabeza;
         Nodo auxilar2 = null;
@@ -70,6 +71,7 @@ public class ListaSimple {
         }
     }
     
+    //METODO PARA RECORRER LA LISTA
     public void recorrer(){
         Nodo auxiliar = this.cabeza;
         while (auxiliar!=null) {            

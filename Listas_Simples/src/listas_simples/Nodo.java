@@ -6,7 +6,7 @@ package listas_simples;
 
 /**
  *
- * @author Usuario
+ * @author Brayan_Prado
  */
 public class Nodo {
     private int indicador; //Información que se va a almacenar en la lista

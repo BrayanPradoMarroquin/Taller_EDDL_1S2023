@@ -6,15 +6,14 @@ package listas_simples;
 
 /**
  *
- * @author Usuario
+ * @author Brayan_Prado
  */
 public class ListaCircularSimple extends ListaSimple{
-
+    public Nodo cabeza;
     public Nodo cola;
     
     public ListaCircularSimple() {
         this.cabeza = null;
-        this.cola = null;
     }
     
     @Override
@@ -22,18 +21,27 @@ public class ListaCircularSimple extends ListaSimple{
         Nodo nuevo = new Nodo(indicador);
         if (cabeza==null){
             cabeza = nuevo;
-            cola = nuevo;
-            cabeza.siguiente = cola;
-            cola.siguiente = cabeza;
+            cabeza.siguiente = cabeza;
         }else{
-            Nodo auxiliar = cabeza;
-            while (true) {                
-                if(auxiliar.siguiente==cola){
-                    auxiliar.siguiente = nuevo;
-                    nuevo.siguiente = cola;
-                    break;
-                }
+            Nodo auxiliar = this.cabeza;
+            while (auxiliar.siguiente != cabeza) {                
+                auxiliar = auxiliar.siguiente;
             }
+            auxiliar.siguiente = nuevo;
+            nuevo.siguiente = this.cabeza;
         }
     }
+    
+    @Override
+    public void recorrer(){
+        Nodo auxiliar = this.cabeza;
+        if (auxiliar!=null) {
+            do {            
+                System.out.println("El dato es: " + auxiliar.getIndicador());
+                auxiliar = auxiliar.siguiente;
+            } while (auxiliar.siguiente!=cabeza);
+        }
+    }
+    
+    
 }
