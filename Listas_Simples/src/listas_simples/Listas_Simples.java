@@ -52,6 +52,27 @@ public class Listas_Simples {
         CirculoSimple.recorrer();
     }
     
+    public static void ListadeListas(){
+        //INSTANCIAR NUESTRA LISTA DE LISTAS
+        ListaPadre listado = new ListaPadre();
+        
+        //AGREGAR A LA LISTA PRINCIPAL 
+        listado.agregarPrincipal(0);
+        listado.agregarPrincipal(2);
+        listado.agregarPrincipal(4);
+        listado.agregarPrincipal(3);
+        
+        //AGREGAR A LA LISTA SECUNDARIA
+        listado.agregarSecundaria(0, 11);
+        listado.agregarSecundaria(2, 21);
+        listado.agregarSecundaria(3, 31);
+        listado.agregarSecundaria(0, 12);
+        listado.agregarSecundaria(10, 12);
+        
+        //RECORRER NUESTAS LISTAS
+        listado.recorrer();
+    }
+    
     public static void main(String[] args) {
         boolean flag = true;
         do {
@@ -76,6 +97,7 @@ public class Listas_Simples {
             case 4:
                 break;
             case 5:
+                ListadeListas();
                 break;
             case 6:
                 flag = false;
