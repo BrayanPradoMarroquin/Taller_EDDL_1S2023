@@ -19,4 +19,3 @@
 **Grabacion del dia: _https://drive.google.com/file/d/1-VeQdo1GVbKpVyemMMSoXueMF0NPc7wy/view?usp=sharing_**
 
 
-Obsequio: https://github.com/BrayanPradoMarroquin/IPC1_P1/tree/main
